@@ -1,6 +1,5 @@
 //┌-------------------------------------------------------------------------------------------------------┐
 //| Flipkit/source/gpl_license.h                                                                          |
-//| Author: Bek A.                                                                                        |
 //| Last Updated: 7/19/2025                                                                               |
 //| License: GNU General Public License v3.0                                                              |
 //| Description: Displays the GPLv3 license notice for Flipkit.                                           |

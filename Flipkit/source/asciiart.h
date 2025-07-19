@@ -1,6 +1,5 @@
 //┌--------------------------------------------------------------------------------------------------------┐
 //| Flipkit/source/asciiart.h                                                                              |
-//| Author: Bek A.                                                                                         |
 //| Last Updated: 7/19/2025                                                                                |
 //| License: GNU General Public License v3.0                                                               |
 //| Description: This header provides animated ASCII art for the Fliplist tool.                            |

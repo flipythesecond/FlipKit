@@ -1,6 +1,5 @@
 //┌--------------------------------------------------------------------------------------------------------┐
 //| Flipkit/source/cursor.h                                                                                |
-//| Author: Bek A.                                                                                         |
 //| Last Updated: 7/19/2025                                                                                |
 //| License: GNU General Public License v3.0                                                               |
 //| Description: This header provides cross-platform functions to hide and show the console cursor.        |

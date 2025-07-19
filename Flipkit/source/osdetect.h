@@ -1,6 +1,5 @@
 //┌--------------------------------------------------------------------------------------------------------┐
 //| Flipkit/source/osdetect.h                                                                              |
-//| Author: Bek A.                                                                                         |
 //| Last Updated: 7/19/2025                                                                                |
 //| License: GNU General Public License v3.0                                                               |
 //| Description: Provides cross-platform OS detection macros and utility functions for Flipkit.            |

@@ -1,6 +1,5 @@
 //┌-------------------------------------------------------------------------------------------------------┐
 //| Flipkit/source/flipkit.cpp                                                                            |
-//| Author: Bek A.                                                                                        |
 //| Last Updated: 7/19/2025                                                                               |
 //| License: GNU General Public License v3.0                                                              |
 //| Description: Main file for the Flipkit toolkit.                                                       |
