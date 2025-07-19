@@ -99,7 +99,7 @@ inline void printFliplistAsciiArt1() {
     std::cout << "|__|        |__________| |__| |__|       |__________| |__|   |________|             |__|       " << std::endl;
     std::cout << "\033[0m"; // Reset color
 }
-// First Frame of ASCII Art
+// Second Frame of ASCII Art
 inline void printFliplistAsciiArt2() {
     // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -114,7 +114,7 @@ inline void printFliplistAsciiArt2() {
     std::cout << "\033[0m"; // Reset color
 }
 
-// Second Frame of ASCII Art
+// Third Frame of ASCII Art
 inline void printFliplistAsciiArt3() {
     // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -129,7 +129,7 @@ inline void printFliplistAsciiArt3() {
     std::cout << "\033[0m"; // Reset color
 }
 
-// Third Frame of ASCII Art
+// Fourth Frame of ASCII Art
 inline void printFliplistAsciiArt4() {
         // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -144,7 +144,7 @@ inline void printFliplistAsciiArt4() {
     std::cout << "\033[0m"; // Reset color
 }
 
-// Last Frame of ASCII Art
+// Fifth Frame of ASCII Art
 inline void printFliplistAsciiArt5() {
     // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
