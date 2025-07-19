@@ -1,6 +1,6 @@
 //┌--------------------------------------------------------------------------------------------------------┐
 //| Flipkit/source/fliplist.cpp                                                                            |
-//| Author: Flipy                                                                                         |
+//| Author: Flipy                                                                                          |
 //| Last Updated: 7/19/2025                                                                                |
 //| License: GNU General Public License v3.0                                                               |
 //| Description: This source file implements the Fliplist password generator tool.                         |
