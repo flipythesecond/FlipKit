@@ -31,58 +31,77 @@ inline void printFliplistAsciiArt5();
 
 // Animated ASCII Art for Fliplist
 inline void printFliplistAsciiArt() {
-    clearScreen(); // Clear the screen before printing the first art
-    printFliplistAsciiArt1();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
-    printFliplistAsciiArt2();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
-    printFliplistAsciiArt3();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen after the last art
-    printFliplistAsciiArt4();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen after the last art
+    clearScreen(); // Clear once at the beginning
+    
+    // Move cursor to top-left and overwrite frames
+    std::cout << "\033[H"; // Move cursor to home position (1,1)
     printFliplistAsciiArt5();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the first art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H"; // Move cursor to home position
     printFliplistAsciiArt4();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt3();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt2();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen after the last art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt1();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen after the last art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    // Continue animation sequence
+    std::cout << "\033[H";
     printFliplistAsciiArt2();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt3();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt4();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    // Final frame sequence
+    std::cout << "\033[H";
     printFliplistAsciiArt5();
-    clearScreen(); // Clear the screen after the last art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(2500000);
+    
+     std::cout << "\033[H"; // Move cursor to home position
     printFliplistAsciiArt4();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt3();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt2();
-    Sleep(250); // Pause for 250 milliseconds
-    clearScreen(); // Clear the screen before printing the next art
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    std::cout << "\033[H";
     printFliplistAsciiArt1();
-    Sleep(2500); // Pause for 2500 milliseconds
-    clearScreen(); // Clear the screen after the last art
-
+    std::cout.flush();
+    if(IS_WINDOWS) Sleep(200); else usleep(200000);
+    
+    clearScreen(); // Clear once at the end
 }
 
 // First Frame of ASCII Art
@@ -98,8 +117,13 @@ inline void printFliplistAsciiArt1() {
     std::cout << "|  |        |  |_______  |  | |  |       |  |_______  |  |    _____|  |             |  |    " << std::endl;
     std::cout << "|__|        |__________| |__| |__|       |__________| |__|   |________|             |__|       " << std::endl;
     std::cout << "\033[0m"; // Reset color
+    std::cout << std::endl;
+    // Centered "By Flipy" with colored "By" and "Flipy"
+    std::cout << std::string(32, ' '); // Adjust spaces for center alignment
+    std::cout << "      \033[38;2;255;165;0mBy\033[0m "; // Orange/Yellow "By"
+    std::cout << "\033[38;2;0;255;255mFlipy ...| \033[0m\n"; // Light blue "Flipy"
 }
-// Second Frame of ASCII Art
+// First Frame of ASCII Art
 inline void printFliplistAsciiArt2() {
     // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -112,9 +136,14 @@ inline void printFliplistAsciiArt2() {
     std::cout << "|  |        |  |_______  |  | |  |       |  |_______  |  |    _____|  |             |  |    " << std::endl;
     std::cout << "|__|        |__________| |__| |__|       |__________| |__|   |________|             |__|       " << std::endl;
     std::cout << "\033[0m"; // Reset color
+    std::cout << std::endl;
+    // Centered "By Flipy" with colored "By" and "Flipy"
+    std::cout << std::string(32, ' '); // Adjust spaces for center alignment
+    std::cout << "      \033[38;2;255;165;0mBy\033[0m "; // Orange/Yellow "By"
+    std::cout << "\033[38;2;0;255;255mFlipy ...\\ \033[0m\n"; // Light blue "Flipy"
 }
 
-// Third Frame of ASCII Art
+// Second Frame of ASCII Art
 inline void printFliplistAsciiArt3() {
     // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -127,9 +156,14 @@ inline void printFliplistAsciiArt3() {
     std::cout << "|  |        |  |_______  |  | |  |       |  |_______  |  |    _____|  |             |  |    " << std::endl;
     std::cout << "|__|        |__________| |__| |__|       |__________| |__|   |________|             |__|       " << std::endl;
     std::cout << "\033[0m"; // Reset color
+    std::cout << std::endl;
+    // Centered "By Flipy" with colored "By" and "Flipy"
+    std::cout << std::string(32, ' '); // Adjust spaces for center alignment
+    std::cout << "      \033[38;2;255;165;0mBy\033[0m "; // Orange/Yellow "By"
+    std::cout << "\033[38;2;0;255;255mFlipy ..- \033[0m\n"; // Light blue "Flipy"
 }
 
-// Fourth Frame of ASCII Art
+// Third Frame of ASCII Art
 inline void printFliplistAsciiArt4() {
         // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -142,9 +176,14 @@ inline void printFliplistAsciiArt4() {
     std::cout << "|  |        |  |_______  |  | |  |       |  |_______  |  |    _____|  |             |  |    " << std::endl;
     std::cout << "|__|        |__________| |__| |__|       |__________| |__|   |________|             |__|       " << std::endl;
     std::cout << "\033[0m"; // Reset color
+    std::cout << std::endl;
+    // Centered "By Flipy" with colored "By" and "Flipy"
+    std::cout << std::string(32, ' '); // Adjust spaces for center alignment
+    std::cout << "      \033[38;2;255;165;0mBy\033[0m "; // Orange/Yellow "By"
+    std::cout << "\033[38;2;0;255;255mFlipy ./ \033[0m\n"; // Light blue "Flipy"
 }
 
-// Fifth Frame of ASCII Art
+// Last Frame of ASCII Art
 inline void printFliplistAsciiArt5() {
     // Green color: \033[38;2;0;255;0m, Reset: \033[0m
     std::cout << "\033[38;2;0;255;0m";
@@ -157,6 +196,11 @@ inline void printFliplistAsciiArt5() {
     std::cout << "|  |        |  |_______  |  | |  |       |  |_______  |  |    _____|  |             |  |    " << std::endl;
     std::cout << "|__|        |__________| |__| |__|       |__________| |__|   |________|             |__|       " << std::endl;
     std::cout << "\033[0m"; // Reset color
+    std::cout << std::endl;
+    // Centered "By Flipy" with colored "By" and "Flipy"
+    std::cout << std::string(32, ' '); // Adjust spaces for center alignment
+    std::cout << "      \033[38;2;255;165;0mBy\033[0m "; // Orange/Yellow "By"
+    std::cout << "\033[38;2;0;255;255mFlipy | \033[0m\n"; // Light blue "Flipy"
 }
 #endif // ASCIIART_H
 
